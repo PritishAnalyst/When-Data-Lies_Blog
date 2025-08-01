@@ -94,35 +94,57 @@
 
     <section class="section">
       <h2>What Is “Dirty Data”?</h2>
-      <p>Dirty data includes missing, inconsistent, duplicated or inaccurate records—but it also hides subtler issues like bias and lack of fairness.</p>
+      <p>Dirty data includes missing, inconsistent, duplicated or inaccurate records but, it also hides subtler issues like bias and lack of fairness.</p>
       <p>This section explores different types of bias from the Google Data Analytics professional certification:</p>
       <ul>
-        <li><strong>Selection/sampling bias:</strong> When your sample isn’t representative—e.g. surveying only urban users and ignoring rural demographics. This skews results toward one subgroup.</li>
+        <li><strong>Selection/sampling bias:</strong> When your sample isn’t representative e.g. surveying only urban users and ignoring rural demographics. This skews results toward one subgroup.</li>
         <li><strong>Confirmation bias:</strong> Analysts cherry‑pick data or features that confirm existing beliefs or hypotheses.</li>
-        <li><strong>Historical/temporal bias:</strong> Training data reflects outdated patterns—such as hiring trends—that no longer reflect fairness or current reality.</li>
+        <li><strong>Historical/temporal bias:</strong> Training data reflects outdated patterns such as hiring trends that no longer reflect fairness or current reality.</li>
         <li><strong>Reporting bias:</strong> Unusual or negative events are over‑documented; ordinary cases are under‑recorded, leading to imbalanced datasets.</li>
-        <li><strong>Algorithmic bias:</strong> Even if data is correct, models may amplify disparities—for example facial recognition misidentifying darker-skinned individuals at higher error rates.</li>
+        <li><strong>Algorithmic bias:</strong> Even if data is correct, models may amplify disparities, for example facial recognition misidentifying darker-skinned individuals at higher error rates.</li>
       </ul>
-      <p><strong>Fairness</strong> matters at every stage—collection and analysis. Collect broadly and transparently, audit for under‑represented groups, and avoid exclusion. In analysis, test models across subgroups, use fairness metrics, and keep humans in the loop to flag unfair outputs.</p>
+      <p><strong>Fairness</strong> matters at every stage wether collection and analysis. Collect broadly and transparently, audit for under‑represented groups, and avoid exclusion. In analysis, test models across subgroups, use fairness metrics, and keep humans in the loop to flag unfair outputs.</p>
     </section>
 
-    <section class="section horizontal">
-      <div class="column">
-        <h2>A Wake‑Up Example: Google Flu Trends (Expanded)</h2>
-        <p>Google Flu Trends (GFT) aimed to predict flu outbreaks using search queries. Initially it matched CDC data—but later wildly over‑estimated cases by up to 140% in the 2012‑13 season.</p>
-        <p>Why it failed:</p>
-        <ul>
-          <li>Overfitting: GFT used search terms that correlated by coincidence—not true flu indicators (e.g. “high school basketball”).</li>
-          <li>Changes in user behavior: Suggested searches and interface changes altered query patterns, but GFT didn’t adapt.</li>
-          <li>Lack of transparency and validation: Google never published the full model or search algorithm, making peer review impossible.</li>
-        </ul>
-      </div>
-      <div class="column">
-        <h2>Another Case: Social Media and COVID‑19 Surveys</h2>
-        <p>During COVID‑19, platforms like Facebook and Google partnered with CMU to collect symptom and search data for forecasting. While valuable, these datasets suffered from self‑reporting and coverage biases—certain groups (elderly or low‑income) underreport symptoms or lack access, skewing the models.</p>
-        <p>This illustrates how even modern predictive systems can fail fairness tests unless diverse representation is deliberately included.</p>
-      </div>
-    </section>
+   <section class="section horizontal">
+  <div class="column">
+    <h2><strong>A Wake-Up Example: Google Flu Trends</strong></h2>
+    <p>
+      Google Flu Trends (GFT) was an effort by Google to predict flu outbreaks based on what people were searching online. 
+      The idea was that if many people searched things like “flu symptoms,” it might mean the flu was spreading. At first, it 
+      seemed promising, it matched actual flu cases tracked by health experts. But later, it hugely overestimated the number 
+      of flu cases, by as much as 140% during the 2012/13 season.
+    </p>
+    <p><strong>So, what went wrong?</strong></p>
+    <ul>
+      <li><strong>Overfitting the data:</strong> GFT picked up search terms that looked useful but weren't truly related to the flu, like 
+        people searching for “high school basketball.”</li>
+      <li><strong>Changes in user behavior:</strong> People began using Google differently, and the system couldn’t keep up with these 
+        new patterns.</li>
+      <li><strong>No transparency:</strong> Google didn’t explain how the model worked, so researchers couldn’t test or improve it.</li>
+    </ul>
+    <p><strong>What we learned:</strong> A model must be flexible, transparent, and tested often. Otherwise, it can easily be misled by 
+      unrelated trends or behavioral changes.</p>
+  </div>
+  <div class="column">
+    <h2>Another Case: Social Media and COVID-19 Surveys</h2>
+    <p>
+      During the COVID-19 pandemic, platforms like Facebook and Google teamed up with researchers at CMU to gather data 
+      from millions of people to help forecast virus spread. Though useful, this approach also had major issues.
+    </p>
+    <ul>
+      <li><strong>Self-reporting bias:</strong> People filled out symptom surveys themselves, and the results weren’t always honest or 
+        complete.</li>
+      <li><strong>Access and coverage gaps:</strong> Older people or low-income groups often didn’t have access to take the surveys, 
+        so their data was missing.</li>
+      <li><strong>Skewed predictions:</strong> Since the responses mostly came from certain demographics, the models didn’t reflect 
+        reality for everyone.</li>
+    </ul>
+    <p><strong>What we learned:</strong> Even high-tech systems can fail if the data is biased or incomplete. Diverse and inclusive 
+      data is essential for fairness and accuracy.</p>
+  </div>
+</section>
+
 
     <section class="section">
       <h2>Everyday Business Consequences</h2>
@@ -146,51 +168,80 @@
       </ul>
     </section>
 
-    <section class="section">
-      <h2>Root Causes of Dirty Data (Expanded)</h2>
-      <ul>
-        <li>Lack of governance: No standardized protocols for data collection, validation, lineage or ownership.</li>
-        <li>Manual entry errors: Typos, inconsistent formats, duplicate or missing records.</li>
-        <li>Legacy systems & silos: Fragmented systems store conflicting or outdated versions of the same data.</li>
-        <li>Volume overload: Unfiltered data collection creates noise without prioritization.</li>
-        <li>Bias in capture: Sampling, confirmation, reporting or historical biases built into initial data.</li>
-        <li>Algorithmic amplification: Models trained on biased datasets worsen disparities.</li>
-        <li>Lack of oversight: Without human review and fairness checks, anomalies and bias go unchecked.</li>
-      </ul>
-    </section>
+   <section class="section">
+  <h2><strong>Root Causes of Dirty Data</strong></h2>
+  <ul>
+    <li><strong>Lack of governance:</strong> No standardized protocols for data collection, validation, lineage or ownership.</li>
+    <li><strong>Manual entry errors:</strong> Typos, inconsistent formats, duplicate or missing records.</li>
+    <li><strong>Legacy systems & silos:</strong> Fragmented systems store conflicting or outdated versions of the same data.</li>
+    <li><strong>Volume overload:</strong> Unfiltered data collection creates noise without prioritization.</li>
+    <li><strong>Bias in capture:</strong> Sampling, confirmation, reporting or historical biases built into initial data.</li>
+    <li><strong>Algorithmic amplification:</strong> Models trained on biased datasets worsen disparities.</li>
+    <li><strong>Lack of oversight:</strong> Without human review and fairness checks, anomalies and bias go unchecked.</li>
+    <li><strong>Unverified metadata:</strong> Incorrect, incomplete, or missing metadata leads to misinterpretation and misclassification of data.</li>
+  </ul>
+</section>
 
     <section class="section horizontal">
-      <div class="column">
-        <h2>Best Practices to Turn Clean, Fair Data into Insight</h2>
-        <ol>
-          <li>Define inclusive data collection standards across demographics and sources.</li>
-          <li>Automate cleaning: dedupe, detect missing values, normalize formats.</li>
-          <li>Continuously monitor quality and fairness—don’t wait until analysis starts.</li>
-          <li>Embed human oversight to flag bias or anomalies before rollout.</li>
-          <li>Use fairness-aware metrics: evaluate model performance across subgroups.</li>
-          <li>Align analytics with specific business questions and stakeholder goals.</li>
-        </ol>
-      </div>
-      <div class="column">
-        <h2>The Value of Doing It Right</h2>
-        <p>When data is clean and fair, analytics deliver accurate insights, faster decisions, and higher ROI. Teams gain trust, customers feel respected, and leadership sees measurable outcomes.</p>
-      </div>
-    </section>
+  <div class="column">
+    <h2>Best Practices to Turn Clean, Fair Data into Insight</h2>
+    <ol>
+      <li>Define inclusive data collection standards across demographics and sources.</li>
+      <li>Automate cleaning: dedupe, detect missing values, normalize formats.</li>
+      <li>Continuously monitor quality and fairness and don’t wait until analysis starts.</li>
+      <li>Embed human oversight to flag bias or anomalies before rollout.</li>
+      <li>Use fairness-aware metrics: evaluate model performance across subgroups.</li>
+      <li>Align analytics with specific business questions and stakeholder goals.</li>
+      <li>Ensure transparency: document data sources, assumptions, and transformation steps.</li>
+      <li>Apply version control to datasets to track changes and maintain reproducibility.</li>
+      <li>Balance datasets to avoid overrepresentation or underrepresentation of groups.</li>
+      <li>Include diverse domain experts when designing data collection and analytics workflows.</li>
+      <li>Periodically audit for algorithmic bias and unintended consequences post-deployment.</li>
+      <li>Train teams on data ethics, privacy, and responsible use of machine learning.</li>
+    </ol>
+  </div>
+  <div class="column">
+    <h2>The Value of Doing It Right</h2>
+    <p>When data is clean and fair, analytics deliver accurate insights, faster decisions, and higher ROI. Teams gain trust, customers feel respected, and leadership sees measurable outcomes.</p>
+    <p>Clean, ethically sourced data ensures accuracy, fairness, and inclusiveness in analytics outcomes. It prevents misleading conclusions caused by bias, incomplete records, or unbalanced samples.</p>
+    <p>Organizations that invest in doing data right benefit in several ways:</p>
+    <ul>
+      <li><strong>Sharper insights:</strong> Patterns and signals become clearer without noise or skew.</li>
+      <li><strong>Confident decision-making:</strong> Reliable data eliminates second-guessing.</li>
+      <li><strong>Customer satisfaction:</strong> Fair personalization respects identities and avoids stereotyping.</li>
+      <li><strong>Regulatory compliance:</strong> Clean, fair data minimizes risk under evolving data governance laws.</li>
+      <li><strong>Aligned teams:</strong> Everyone works from the same trustworthy source of truth.</li>
+    </ul>
+    <p>Fair and clean data doesn’t just improve performance—it reinforces ethics, inclusivity, and long-term trust.</p>
+  </div>
+</section>
 
-    <section class="section">
-      <h2>Conclusion</h2>
-      <p>Failures in analytics often stem not from tools or algorithms, but from the data itself—its bias, fairness gaps, and poor quality. Organizations that invest in governance, continuous auditing, inclusive collection practices, and fairness-aware modeling build analytics systems that deliver real impact—not illusions.</p>
-    </section>
+
+   <section class="section">
+  <h2>Conclusion</h2>
+  <p>
+    Many times, analytics projects fail not because of the tools or complex algorithms used, but because of problems with the data itself. 
+    If the data is biased, unfair, incomplete, or of poor quality, even the most advanced systems can give wrong or misleading results.
+  </p>
+  <p>
+    To avoid this, organizations need to do more than just collect data. They must take care of how data is gathered, make sure it 
+    represents everyone fairly, and regularly check for errors or changes. This is called good data governance and auditing.
+  </p>
+  <p>
+    It is also important to design models that are aware of fairness, so that predictions or decisions do not accidentally hurt certain groups 
+    or miss important patterns. By focusing on these practices, companies can make sure their data systems are not just smart, but also 
+    trustworthy, fair, and useful in the real world.
+  </p>
+</section>
+
 
     <section class="section sources">
       <h2>Sources</h2>
       <ul>
-        <li>What We Can Learn from the Epic Failure of Google Flu Trends: https://www.wired.com/2015/10/can-learn-epic-failure-google-flu-trends</li>
-        <li>Studies on overestimation and bias in GFT (Science, Wired, Time)</li>
-        <li>Reporting bias and fairness frameworks from CMU COVIDCast</li>
-        <li>Types of bias: selection, confirmation, historical, reporting, algorithmic</li>
-        <li>Fairness evaluation in ML workflows</li>
-      </ul>
+        <li><a href="https://www.wired.com/2015/10/can-learn-epic-failure-google-flu-trends" target="_blank">What We Can Learn from the Epic Failure of Google Flu Trends (Wired)</a></li>
+        <li><a href="https://www.wired.com/story/survey-data-facebook-google-map-covid-19-carnegie-mellon" target="_blank">Reporting bias and fairness frameworks from CMU COVIDCast</a></li>
+         <li><a href="https://www.ibm.com/think/topics/data-bias" target="_blank">Types of bias: selection, confirmation, historical, reporting, algorithmic</a></li>
+         <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11966066/" target="_blank">Fairness evaluation in ML workflows</a></li>
     </section>
 
     <footer>
